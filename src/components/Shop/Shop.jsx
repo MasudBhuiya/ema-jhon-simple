@@ -19,6 +19,7 @@ const Shop = () => {
         const savedCart = []
         // step 1; get id of the addedProduct
         for(const id in storedCart){
+            // console.log(storedCart)
             // step 2: get product from products state by using id
             const addedProduct = products.find(product => product.id === id);
             if(addedProduct){
@@ -28,8 +29,6 @@ const Shop = () => {
                 // step 4: add the addedProduct to the saved cart
                 savedCart.push(addedProduct)
             }
-            console.log('added product', addedProduct)
-
         }
         // step 5: set the cart 
         setCart(savedCart)
