@@ -2,15 +2,15 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = ({ cart }) => {
-    console.log(cart);
+    // console.log(cart);
     let total = 0;
     let shipping = 0;
     let quantity = 0;
-    for(let product of cart){
+    for(let product of cart){ 
         
-        //1. if(product.quantity === 0){
-        //product.quantity = 1;
-        // }
+        if(product.quantity === 0){
+        product.quantity = 1;
+        }
         // 2. product.quantity = product.quantity || 1 ;
         total = total + product.price * product.quantity;
         shipping = shipping + product.shipping * product.quantity;
@@ -31,3 +31,4 @@ const Cart = ({ cart }) => {
 };
 
 export default Cart;
+

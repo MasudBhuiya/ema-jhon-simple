@@ -22,6 +22,7 @@ const Shop = () => {
             // console.log(storedCart)
             // step 2: get product from products state by using id
             const addedProduct = products.find(product => product.id === id);
+
             if(addedProduct){
                 // step 3: add quantity 
                 const quantity = storedCart[id];
@@ -44,7 +45,7 @@ const Shop = () => {
         <div className='shop-container'>
             <div className="products-container">
                 {
-                    products.map(product => <Product product={product} key={product.id}
+                    products.map(product => <Product product={product} key={product.id} 
                         handleAddToCard={handleAddToCard}></Product>)
                 }
                 
