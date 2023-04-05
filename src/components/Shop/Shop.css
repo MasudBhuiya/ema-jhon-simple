@@ -9,3 +9,16 @@
     grid-gap: 45px;
     margin: 50px;
 }
+.btn-proceed{
+    background-color: #ff9900;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    border-radius: 4px;
+    width: 100%;
+    margin: 10px auto;
+}
+.proceed-link{
+    
+    text-decoration: none;
+}
